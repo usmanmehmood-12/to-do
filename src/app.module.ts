@@ -35,7 +35,6 @@ export class AppModule implements OnModuleInit {
       await this.dataSource.query('SELECT 1');
       console.log('✅ Database connected successfully');
     } catch (error) {
-
       console.error('❌ Database connection failed:', error);
     }
   }
