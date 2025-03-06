@@ -20,7 +20,7 @@ This is the backend for a **Todo App** built with **NestJS**, a progressive **No
 2) Log in User: http://localhost:3001/auth/login
 3) Add User Task: http://localhost:3001/tasks
 4) EDIT/PATCH/UPDATE User Task: http://localhost:3000/tasks/:id 
-5) DELETE User Tasks: http://localhost:3000/tasks/:id'
+5) DELETE User Tasks: http://localhost:3000/tasks/:id
 
 
 * **ToDo Management**
