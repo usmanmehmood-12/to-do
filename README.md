@@ -29,3 +29,26 @@ This is the backend for a **Todo App** built with **NestJS**, a progressive **No
 3) Task Completion: Tasks can be marked as completed (with checkboxes).
 4) Task Integrity:Ensure that expenses are associated with the logged-in user.
 5) Due Dates: Users can set deadlines for tasks.
+
+
+### ***Env:***
+```bash
+# Port No
+DB_PORT=5432
+
+# Postgres DB Host
+DB_HOST=
+
+# Postgres DB User
+DB_USER=
+
+# Postgres DB Name
+DB_NAME=
+
+# Postgres DB Password
+DB_PASSWORD=
+
+# JWT SECRET
+JWT_SECRET=
+
+```
