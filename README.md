@@ -1,73 +1,31 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+#  Todo Application Backend
 
 ## Description
+This is the backend for a **Todo App** built with **NestJS**, a progressive **Node.js framework** for building efficient and scalable server-side applications. The backend provides RESTful APIs to create users, login, manage tasks, including creating, reading, updating, and deleting tasks.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## ***Features:***
 
-## Installation
+* **App Backend**
+1)  Create a backend to do application using ***Node.js***, ***TypeScript*** , ***PostgreSQL database*** and ***Docker***.
+2)  The PostgreSQL database is hosted inside a Docker container for an isolated, portable, and consistent environment.
+2)  Ensure that the web application communicates effectively with the chosen frontend technology (React.js).
 
-```bash
-$ npm install
-```
+* **User Authentication**
+1) Secure backend user signup and login functionality with ***JWT***.
+2) Add ***JWT*** authentication/authorization for access to REST API Endpoints (CRUD).
 
-## Running the app
 
-```bash
-# development
-$ npm run start
+* **Backend API Endpoints:**
+1) Sign up user: http://localhost:3001/auth/signup
+2) Log in User: http://localhost:3001/auth/login
+3) Add User Task: http://localhost:3001/tasks
+4) EDIT/PATCH/UPDATE User Task: http://localhost:3000/tasks/:id 
+5) DELETE User Tasks: http://localhost:3000/tasks/:id'
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+* **ToDo Management**
+1) Task Creation: Users can add tasks with titles, descriptions, and deadlines.
+2) Task Management: Tasks can be updated, edited, and deleted.
+3) Task Completion: Tasks can be marked as completed (with checkboxes).
+4) Task Integrity:Ensure that expenses are associated with the logged-in user.
+5) Due Dates: Users can set deadlines for tasks.
