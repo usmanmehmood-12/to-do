@@ -12,9 +12,18 @@ To run the backend application, follow the steps below:
 
 ```bash
   npm install
-  
+```
+
+2. **Run Docker**:
+   Initialize and run docker to run postgres DB:
+
+```bash
   docker-compose up -d   
-  
+```
+
+3. **Run the backend app**:
+
+```bash
   npm run start:dev
 ```
 
