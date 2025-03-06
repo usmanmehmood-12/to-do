@@ -37,7 +37,7 @@ export class AuthService {
     if (existingUser) {
       throw new ConflictException('Username already exists');
     }
-    console.log('In signup auth service');
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = await this.usersService.createUser(
       username,
@@ -45,7 +45,6 @@ export class AuthService {
     );
 
     const { password: _, ...result } = newUser; // Exclude the password from the result
-    console.log(' SignUp result: ', result);
     return result;
   }
 }

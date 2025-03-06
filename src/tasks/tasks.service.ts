@@ -15,7 +15,7 @@ export class TasksService {
     deadline: Date,
     user: any,
   ) {
-    console.log('createTask user: ', user);
+
     const task = this.tasksRepository.create({
       title,
       description,
@@ -27,7 +27,7 @@ export class TasksService {
   }
 
   async getUserTasks(userId: number): Promise<Task[]> {
-    console.log('task.service | getUserTasks userId: ', userId);
+
     return await this.tasksRepository.find({ where: { user: { id: userId } } });
   }
 
