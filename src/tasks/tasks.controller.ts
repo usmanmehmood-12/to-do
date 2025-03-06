@@ -19,6 +19,14 @@ export class TasksController {
 
   @UseGuards(JwtAuthGuard)
   @Post()
+/*************  ✨ Codeium Command ⭐  *************/
+  /**
+   * Creates a new task for the given user.
+   * @param body The body of the request with the title, description, and deadline of the task.
+   * @param req The request object containing the user making the request.
+   * @returns A promise that resolves to the newly created task.
+   */
+/******  482b84db-d327-431d-a806-15995499f35b  *******/
   async createTask(
     @Body() body: { title: string; description: string; deadline: Date },
     @Request() req: { user: User },
@@ -32,12 +40,23 @@ export class TasksController {
   }
   @UseGuards(JwtAuthGuard)
   @Get()
+  /**
+   * Finds all tasks for the given user.
+   * @param req The request object containing the user making the request.
+   * @returns A promise that resolves with an array of tasks associated with the given user.
+   */
   async getUserTasks(@Request() req: { user: User }) {
     return this.tasksService.getUserTasks(req.user.id);
   }
 
   @UseGuards(JwtAuthGuard)
   @Patch(':id')
+  /**
+   * Updates a task in the database by its ID.
+   * @param id The ID of the task to update.
+   * @param body The body of the request with the title, description, and completion status of the task.
+   * @returns A promise that resolves with a message indicating that the task was updated successfully.
+   */
   async updateTaskStatus(
     @Param('id') id: number,
     @Body() body: { title: string; description: string; isCompleted: boolean },
@@ -59,6 +78,11 @@ export class TasksController {
 
   @UseGuards(JwtAuthGuard)
   @Delete(':id')
+  /**
+   * Deletes a task in the database by its ID.
+   * @param id The ID of the task to delete.
+   * @returns A promise that resolves with a message indicating that the task was deleted successfully.
+   */
   async deleteTask(@Param('id') id: number) {
     await this.tasksService.deleteTask(id);
     return { message: 'Task deleted successfully' };

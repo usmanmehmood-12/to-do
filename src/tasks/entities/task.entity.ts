@@ -26,6 +26,7 @@ export class Task {
   @CreateDateColumn()
   createdAt: Date;
 
+  // many to one relation of tasks with a user
   @ManyToOne(() => User, (user) => user.tasks, { onDelete: 'CASCADE' })
   user: User;
 }
