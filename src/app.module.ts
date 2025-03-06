@@ -27,9 +27,16 @@ import { TasksModule } from './tasks/tasks.module';
   controllers: [AppController],
   providers: [AppService],
 })
+
 export class AppModule implements OnModuleInit {
   constructor(@InjectDataSource() private readonly dataSource: DataSource) {}
 
+  /**
+   * Initializes the module by connecting to the database.
+   * This function is called when the module is initialized.
+   * If the database connection is successful, it logs a success message.
+   * If the database connection fails, it logs an error message.
+   */
   async onModuleInit() {
     try {
       await this.dataSource.query('SELECT 1');
