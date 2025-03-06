@@ -27,7 +27,6 @@ import { TasksModule } from './tasks/tasks.module';
   controllers: [AppController],
   providers: [AppService],
 })
-
 export class AppModule implements OnModuleInit {
   constructor(@InjectDataSource() private readonly dataSource: DataSource) {}
 

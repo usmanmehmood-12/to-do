@@ -19,14 +19,6 @@ export class TasksController {
 
   @UseGuards(JwtAuthGuard)
   @Post()
-/*************  ✨ Codeium Command ⭐  *************/
-  /**
-   * Creates a new task for the given user.
-   * @param body The body of the request with the title, description, and deadline of the task.
-   * @param req The request object containing the user making the request.
-   * @returns A promise that resolves to the newly created task.
-   */
-/******  482b84db-d327-431d-a806-15995499f35b  *******/
   async createTask(
     @Body() body: { title: string; description: string; deadline: Date },
     @Request() req: { user: User },

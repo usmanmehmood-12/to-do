@@ -13,6 +13,14 @@ import { LocalStrategy } from './local.strategy';
     UsersModule,
     PassportModule,
     JwtModule.registerAsync({
+      /**
+       * Factory function to configure the JwtModule.
+       *
+       * @returns An object containing the JWT secret and sign options.
+       * - `secret`: The secret key for signing JWT tokens, retrieved from environment variables.
+       * - `signOptions`: Options for signing the JWT, including the expiration time.
+       */
+
       useFactory: async () => ({
         secret: process.env.JWT_SECRET,
         signOptions: { expiresIn: '1h' },
