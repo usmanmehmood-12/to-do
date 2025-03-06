@@ -54,6 +54,14 @@ To run the backend application, follow the steps below:
 4) Task Integrity:Ensure that expenses are associated with the logged-in user.
 5) Due Dates: Users can set deadlines for tasks.
 
+## Technologies Used
+
+- **NestJS**: A powerful framework for building server-side applications with Node.js.
+- **TypeORM**: Object-Relational Mapping (ORM) for interacting with the database.
+- **PostgreSQL**: Relational database to store user and task information.
+- **JWT (JSON Web Tokens)**: For secure authentication and authorization.
+- **Bcrypt.js**: To hash passwords securely.
+
 
 ### ***Env:***
 ```bash
