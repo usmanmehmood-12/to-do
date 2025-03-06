@@ -3,6 +3,21 @@
 ## Description
 This is the backend for a **Todo App** built with **NestJS**, a progressive **Node.js framework** for building efficient and scalable server-side applications. The backend provides RESTful APIs to create users, login, manage tasks, including creating, reading, updating, and deleting tasks.
 
+## Backend Setup
+
+To run the backend application, follow the steps below:
+
+1. **Install Dependencies**:
+   Install all necessary dependencies using npm:
+
+```bash
+  npm install
+  
+  docker-compose up -d   
+  
+  npm run start:dev
+```
+
 ## ***Features:***
 
 * **App Backend**
