@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres'
+    container_name: 'to-do-app-yeah-sol'
+    environment:
+      POSTGRES_DB: 'todoApp'
+      POSTGRES_USER: 'todoApp'
+      POSTGRES_PASSWORD: 'todoApp'
+      ALLOW_IP_RANGE: '0.0.0.0/0'
+    ports:
+      - '5432:5432'
