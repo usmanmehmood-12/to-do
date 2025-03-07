@@ -1,7 +1,7 @@
 #  Todo Application Backend
 
 ## Description
-This is the backend for a **Todo App** built with **NestJS**, a progressive **Node.js framework** for building efficient and scalable server-side applications. The backend provides RESTful APIs to create users, login, manage tasks, including creating, reading, updating, and deleting tasks.
+This is the backend for a **Todo App** built with **NestJS**, a progressive **Node.js framework** for building efficient and scalable server-side applications. The backend provides RESTful APIs to create users, login, manage tasks, including creating, reading, updating, and deleting tasks along with logout functionality.
 
 ## Backend Setup
 
@@ -32,7 +32,11 @@ To run the backend application, follow the steps below:
 * **App Backend**
 1)  Create a backend to do application using ***Node.js***, ***TypeScript*** , ***PostgreSQL database*** and ***Docker***.
 2)  The PostgreSQL database is hosted inside a Docker container for an isolated, portable, and consistent environment.
-2)  Ensure that the web application communicates effectively with the chosen frontend technology (React.js).
+3)  Ensure that the backend REST APIs communicates effectively with the chosen frontend technology (React.js).
+4)  Structured architecture (guards, modules, controllers, services, entities)
+5)  Security considerations (input validation, cascading deletes)
+6)  One-to-many relationship between User and Task
+7)  Basic tests for controller and service
 
 * **User Authentication**
 1) Secure backend user signup and login functionality with ***JWT***.
@@ -45,13 +49,14 @@ To run the backend application, follow the steps below:
 3) Add User Task: http://localhost:3001/tasks
 4) EDIT/PATCH/UPDATE User Task: http://localhost:3001/tasks/:id 
 5) DELETE User Tasks: http://localhost:3001/tasks/:id
+6) GET User Tasks: http://localhost:3000/tasks
 
 
 * **ToDo Management**
 1) Task Creation: Users can add tasks with titles, descriptions, and deadlines.
 2) Task Management: Tasks can be updated, edited, and deleted.
 3) Task Completion: Tasks can be marked as completed (with checkboxes).
-4) Task Integrity:Ensure that expenses are associated with the logged-in user.
+4) Task Integrity: Ensure that tasks are associated with the logged-in user.
 5) Due Dates: Users can set deadlines for tasks.
 
 ## Technologies Used
@@ -62,6 +67,7 @@ To run the backend application, follow the steps below:
 - **JWT (JSON Web Tokens)**: For secure authentication and authorization.
 - **Bcrypt.js**: To hash passwords securely.
 - **Prettier**: For clean code & code formatting.
+- **Docker**: Used to run postgres DB in a containerized environment.
 
 ### ***Env:***
 ```bash
@@ -69,7 +75,7 @@ To run the backend application, follow the steps below:
 DB_PORT=5432
 
 # Postgres DB Host
-DB_HOST=
+DB_HOST=localhost
 
 # Postgres DB User
 DB_USER=
