@@ -43,8 +43,8 @@ To run the backend application, follow the steps below:
 1) Sign up user: http://localhost:3001/auth/signup
 2) Log in User: http://localhost:3001/auth/login
 3) Add User Task: http://localhost:3001/tasks
-4) EDIT/PATCH/UPDATE User Task: http://localhost:3000/tasks/:id 
-5) DELETE User Tasks: http://localhost:3000/tasks/:id
+4) EDIT/PATCH/UPDATE User Task: http://localhost:3001/tasks/:id 
+5) DELETE User Tasks: http://localhost:3001/tasks/:id
 
 
 * **ToDo Management**
@@ -61,7 +61,7 @@ To run the backend application, follow the steps below:
 - **PostgreSQL**: Relational database to store user and task information.
 - **JWT (JSON Web Tokens)**: For secure authentication and authorization.
 - **Bcrypt.js**: To hash passwords securely.
-
+- **Prettier**: For clean code & code formatting.
 
 ### ***Env:***
 ```bash
